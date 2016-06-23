@@ -1,0 +1,42 @@
+
+CREATE TABLE VIDEO_ORIGINAL(
+    KEY            INT     PRIMARY KEY     NOT NULL,
+    NAME			  TEXT    NOT NULL,
+    URL            TEXT    NOT NULL
+);
+
+CREATE TABLE VIDEO_FILTRADOS(
+    KEY            INT     PRIMARY KEY     NOT NULL,
+    KEY_ORIGINAL	  INT     NOT NULL,
+    NAME			  TEXT    NOT NULL,
+    URL            TEXT    NOT NULL
+);
+
+
+-------------------------
+
+DROP TABLE USER;
+DROP TABLE TESTE_USUARIO;
+
+CREATE TABLE USER(
+    EMAIL          TEXT    PRIMARY KEY     NOT NULL,
+    PASSWORD       TEXT    NOT NULL,
+    NAME           TEXT    NOT NULL,
+    TYPE           INT,
+    CURRENT_TEST   INT
+);
+
+
+CREATE TABLE TESTE_USUARIO(
+    KEY            INTEGER     PRIMARY KEY  AUTOINCREMENT,
+    EMAIL	  TEXT         NOT NULL,
+    FINAL         INTEGER      NOT NULL,
+    V_ORIGINAL    INTEGER      NOT NULL,
+    V1		  INTEGER,
+    V2		  INTEGER,
+    V3		  INTEGER,
+    V4		  INTEGER,
+    V_ESCOLHA     INTEGER
+);
+
+
